@@ -1,4 +1,4 @@
-import { Configuration, Key, Value } from "./configuration";
+import { Configuration, Key, Value } from './configuration';
 import { range } from "./functions";
 
 export class Generator {
@@ -75,14 +75,15 @@ export class Generator {
             const values = this.values(key);
 
             values.forEach((value, name) => {
-                const exists = items.find(i => i.name === key.short && i.property === key.short);
+                const n = this.configuration.prefix + key.short + this.configuration.seperator + name + this.configuration.suffix;
+                const exists = items.find(i => i.name === n);
 
                 if (exists) {
-                    console.warn(`Duplicate key ${key.short} found. Previously defined property was ${exists.property}.`);
+                    console.warn(`Duplicate key "${n}" found for property "${key.name}" and value "${value}". Previously defined property was "${exists.property}" and value "${exists.value}".`);
                 }
 
                 items.push({
-                    name: this.configuration.prefix + key.short + this.configuration.seperator + name + this.configuration.suffix,
+                    name: n,
                     property: key.name,
                     value
                 });

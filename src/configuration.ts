@@ -193,7 +193,7 @@ export const Configuration: Configuration = {
             short: "m",
             name: "margin",
             options: {
-                inherit: ["general", "pixels", "percentages"]
+                inherit: ["pixels", "percentages"]
             }
         },
         {
@@ -228,7 +228,7 @@ export const Configuration: Configuration = {
             short: "p",
             name: "padding",
             options: {
-                inherit: ["general", "pixels", "percentages"]
+                inherit: ["pixels", "percentages"]
             }
         },
         {
@@ -316,7 +316,7 @@ export const Configuration: Configuration = {
             short: "fw",
             name: "flex-wrap",
             values: {
-                n: "nowrap",
+                nw: "nowrap",
                 w: "wrap",
                 wr: "wrap-reverse",
             }
@@ -380,6 +380,20 @@ export const Configuration: Configuration = {
                     repeat: 11,
                     step: 0.1
                 }
+            }
+        },
+        {
+            short: "w",
+            name: "width",
+            options: {
+                inherit: ["pixels", "percentages"]
+            }
+        },
+        {
+            short: "h",
+            name: "height",
+            options: {
+                inherit: ["pixels", "percentages"]
             }
         }
     ]
