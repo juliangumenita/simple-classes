@@ -1,0 +1,16 @@
+{
+  "name": "simple-classes",
+  "version": "0.0.0",
+  "description": "Simple and super short classes for CSS",
+  "main": "index.js",
+  "scripts": {
+    "generate": "ts-node scripts/generate.ts"
+  },
+  "author": "Julian Gumenita <Julian Gumenita>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
